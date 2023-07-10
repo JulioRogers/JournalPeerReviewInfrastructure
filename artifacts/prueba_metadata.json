@@ -1,0 +1,468 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "fullname",
+						"type": "string"
+					}
+				],
+				"name": "JournalCreationRequest",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "fullname",
+						"type": "string"
+					}
+				],
+				"name": "UserRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "fullname",
+						"type": "string"
+					}
+				],
+				"name": "UserUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "av",
+						"type": "uint256"
+					}
+				],
+				"name": "aviso",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_fgsp",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_n1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_sgsp",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_n2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_ip",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cost",
+						"type": "uint256"
+					}
+				],
+				"name": "CreateJournal",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_aboutlink",
+						"type": "string"
+					}
+				],
+				"name": "RequestJournalCreation",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "SeeRequestStatus",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_university",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_revisorrol",
+						"type": "bool"
+					}
+				],
+				"name": "UpdateData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_fullname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_university",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_revisorrol",
+						"type": "bool"
+					}
+				],
+				"name": "UserRegister",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_vote",
+						"type": "string"
+					}
+				],
+				"name": "VoteRequest",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_HasVoted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "_JournalRequests",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_Requester",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_Name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_AboutLink",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_Time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_State",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_UpVotes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_DownVotes",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_Journals",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_Name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_FGSP",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_N1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_SGSP",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_N2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_IP",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_Cost",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_Users",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_FullName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_Email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_University",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_RevisorRol",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"CommunityNetwork.sol": "prueba"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"CommunityNetwork.sol": {
+			"keccak256": "0x9cbc50bd8808beea0ef88e476955751233b17e2a7528ad2189e0c5e949e6de00",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8bc906de6079866cdea2f56f87fbcfc8f37e1cc77c58f0d1e88fc3624e8a4755",
+				"dweb:/ipfs/QmZGx1yWuLnRcSMZtjXcmgURFfGKTi7e1gD7z5e9nyG69s"
+			]
+		},
+		"ERC20.sol": {
+			"keccak256": "0x3277d1b7bfa8951e943e6560f53c7a4dd15a6c556792ecfe334be23b357597f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6bcec0760b73c935a4fa7fe41afdc45bb87b8df4832602027dec136b5d83b10d",
+				"dweb:/ipfs/Qmbosma3HDiwpqWcVVoFY6dURP6tTNzfP2YGrZpVyDBjo5"
+			]
+		},
+		"Revista.sol": {
+			"keccak256": "0x3fa20f021a515a7575b1ed228e123e1834d47bf027d9f314cb04556efe0ca213",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c09b4984ffc72b4ef11667a71de0d61952c413e898ca9007e391c6d29b2def37",
+				"dweb:/ipfs/QmcP9vy9G5XN1AKsdkeD3nSjzLhzbsChKhReRegE2xG6iD"
+			]
+		},
+		"SafeMath.sol": {
+			"keccak256": "0x10b026f5bf6336222f045103d95b94c408fcd4b36095222431626663f519da6a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cb82567f03c95c1518b6d09700323ef2d11bcf587a23f220b5aef4cd0cdf433f",
+				"dweb:/ipfs/QmURQ56waPNQnLAeQYVDui2RJnC5fEKw9v2rA6L4PZhSsb"
+			]
+		}
+	},
+	"version": 1
+}
